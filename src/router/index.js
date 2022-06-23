@@ -1,9 +1,18 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-// 1. 创建路由规则
+import { def } from "@vue/shared";
+import { createRouter, createWebHashHistory} from "vue-router";
+
 const routes = [
-  {
-    path: "/login",
-    name: "login",
-    component: () => import("@/views/login/index.vue"),
-  },
-];
+    {
+        pacth: "/login",
+        name: "login",
+        component: () => import("@/views/login/index.vue")
+    }
+]
+
+const router = createRouter({
+    routes,
+    hash: createWebHashHistory()
+})
+
+export default router;
+export default router;
